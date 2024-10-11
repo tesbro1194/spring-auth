@@ -45,21 +45,3 @@ public class UserController {
         return "redirect:/";
     }
 }
-
-/*
-요약: 해당 메서드의 매개변수로 선언하기만 하면 사용 가능하다.
-HttpServletResponse 객체는 서버가 HTTP 요청을 처리하는 동안 서블릿 컨테이너(예: 톰켓)에 의해 자동으로 생성
-@PostMapping과 같은 요청 핸들러 메서드에서 HttpServletResponse 객체를 매개변수로 선언하면
-스프링이 해당 요청에 대해 적절한 HttpServletResponse 객체를 자동으로 전달해줍니다.
-    사용법:
-1. 응답 해더 설정:
-res.addHeader("Custom-Header", "Value");
-2. 쿠키 설정:
-Cookie cookie = new Cookie("token", jwtToken);
-cookie.setHttpOnly(true); // 쿠키 보안 설정
-cookie.setHttpOnly(true);  // 클라이언트에서 쿠키를 읽지 못하게 함 (보안 강화)
-cookie.setPath("/");  // 쿠키의 유효 범위를 루트로 설정
-res.addCookie(cookie);
-3. 응답 상태 코드 설정:
-res.setStatus(HttpServletResponse.SC_UNAUTHORIZED); // 401 상태 코드 설정
-*/
